@@ -3,8 +3,8 @@ import videoReducer from './slices/videoSlice'
 import timelineReducer from './slices/timelineSlice'
 import audioReducer from './slices/audioSlice'
 import subtitleReducer from './slices/subtitleSlice'
-import overlayReducer from './slices/overlaySlice'
-
+import overlayReducer from './slices/imageOverlaySlice'
+import imageOverlayReducer from './slices/imageOverlaySlice'
 
 export const store = configureStore({
   reducer: {
@@ -12,7 +12,8 @@ export const store = configureStore({
     timeline: timelineReducer,
     audio: audioReducer,
     subtitles: subtitleReducer,
-    overlay: overlayReducer
+    overlay: overlayReducer,
+    imageOverlay: imageOverlayReducer,
   },
 })
 

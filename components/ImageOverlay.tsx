@@ -2,7 +2,7 @@
 
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '@/redux/store'
-import { addImageOverlay, deleteImageOverlay } from '@/redux/slices/imageOverlaySlice'
+import { addImageOverlay, deleteImageOverlay , ImageOverlay} from '@/redux/slices/imageOverlaySlice'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Key, useState } from 'react'
@@ -55,7 +55,7 @@ export default function ImageOverlayEditor() {
       </div>
 
       <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
-        {overlays.map((overlay: { id: Key | null | undefined; fileUrl: string | Blob | undefined; size: any; opacity: any; border: any }) => (
+      {overlays.map((overlay: ImageOverlay) => (
           <div key={overlay.id} className="relative bg-white rounded shadow p-2">
             <img
               src={overlay.fileUrl}

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-interface ImageOverlay {
+export interface ImageOverlay {
   id: string
   fileUrl: string
   position: { x: number; y: number }
