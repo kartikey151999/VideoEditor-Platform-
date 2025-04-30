@@ -4,12 +4,14 @@ interface VideoState {
   file: File | null
   previewURL: string | null
   uploadProgress: number
+  uploadedFile: null
 }
 
 const initialState: VideoState = {
   file: null,
   previewURL: null,
   uploadProgress: 0,
+  uploadedFile: null,
 }
 
 export const videoSlice = createSlice({
