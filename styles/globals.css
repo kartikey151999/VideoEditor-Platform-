@@ -1,0 +1,158 @@
+/* Global Styles - Tailwind Config and Custom Colors */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #dedecefb;
+  --secondary-bg: #c5c2c2; /* Slightly lighter background */
+  --accent-color: #070d0b; /* Cinematic pink/red for highlights */
+  --accent-hover: #ff6f86; /* Hover effect for buttons */
+  --text-light: #ffffff; 
+  --text-dark: #cfcfcf; /* Lighter gray text */
+  --border-light: #2e2e2e; /* Soft border color */
+  --button-bg: #d6cccc; /* Button background */
+  --button-text: #ff4d6a; /* Button text */
+  --button-hover-bg: #2c2c2c; /* Button hover background */
+  --input-bg: #2a2a2a; /* Input field background */
+  --input-border: #444444; /* Input field border */
+  --input-focus-bg: #a49a9a; /* Input focus background */
+}
+
+/* Body */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Button */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  border: 2px solid var(--button-text);
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+button:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/* Input Fields */
+input,
+select {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-light);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  background-color: var(--input-focus-bg);
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+/* Cards */
+.card {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-light);
+}
+
+/* Section */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* Flex Layout */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Hover Effect */
+.hover-effect {
+  transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+}
+
+/* Video Preview */
+.video-preview {
+  background-color: var(--secondary-bg);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Loader / Spinner */
+.loader {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toasts and Alerts */
+.toast {
+  background-color: #ff6f86;
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
