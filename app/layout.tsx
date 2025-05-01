@@ -1,19 +1,19 @@
 // import './globals.css'
 import '../styles/globals.css'
-import { ReduxProvider } from '@/redux/provider'
 import Sidebar from '@/components/SideBar'
+import { ReduxProvider } from '@/redux/provider'
 
 export const metadata = {
-  title: 'Web Video Editor',
-  description: 'A browser-based video editing tool',
+  title: 'Video Editing Platform',
+  description: 'Edit videos in the browser with ease.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100">
+      <body>
         <ReduxProvider>
-          <div className="flex min-h-screen">
+          <div className="flex min-h-screen bg-gray-50 text-gray-900">
             <Sidebar />
             <main className="flex-1 p-6">{children}</main>
           </div>
